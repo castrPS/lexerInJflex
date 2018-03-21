@@ -23,6 +23,8 @@ whitespace = [\n|\t|\f|\r]
 {whitespace} {}
 
 /* palavras reservadas */
+package             { System.out.println("Token PACKAGE"); }
+import              { System.out.println("Token IMPORT"); }
 boolean             { System.out.println("Token BOOLEAN"); }
 class				{ System.out.println("Token CLASS"); }
 public				{ System.out.println("Token PUBLIC"); }
