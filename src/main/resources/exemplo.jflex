@@ -16,10 +16,11 @@ package atividade1;
 /* Insira as regras léxicas abaixo */
 letter          = [a-z|A-Z_]
 digit           = [0-9]
-integer         = [0|(1-9)(0-9)*]
+integer         = 0|[1-9][0-9]*
 alphanumeric    = {letter}|{digit}
-id      = ([_] | {letter})({alphanumeric} | [_])*
+id              = ([_] | {letter})({alphanumeric} | [_])*
 whitespace      = [ |\n|\t|\f|\r]
+comment         = [/|/.*\n]
 
 %%
 
@@ -27,6 +28,7 @@ whitespace      = [ |\n|\t|\f|\r]
 
 /* whitespace e comentarios serao ignorados */
 {whitespace} {}
+{comment}    {}
 
 /* palavras reservadas */
 "package"            { System.out.println("Token PACKAGE"); } 
@@ -53,7 +55,8 @@ whitespace      = [ |\n|\t|\f|\r]
 
 /*identificadores*/
 
-{id} { System.out.println("Token ID: "+  yytext()); }
+{id}      { System.out.println("Token ID: "+  yytext()); }
+{integer} { System.out.println("Token INTEIRO: "+  yytext()); }
 
 /*Operadores*/
 "*"             { System.out.println("Token *"); }
@@ -69,6 +72,18 @@ whitespace      = [ |\n|\t|\f|\r]
 "&&"            { System.out.println("Token &&"); }
 "=="            { System.out.println("Token =="); }
 "||"            { System.out.println("Token ||"); }
+
+/*Pontuacao*/
+";"             { System.out.println("Token ;"); }
+"."             { System.out.println("Token ."); }
+","             { System.out.println("Token ,"); }
+"="             { System.out.println("Token ="); }
+"("             { System.out.println("Token ("); }
+")"             { System.out.println("Token )"); }
+"{"             { System.out.println("Token {"); }
+"}"             { System.out.println("Token }"); }
+"["             { System.out.println("Token ["); }
+"]"             { System.out.println("Token ]"); }
 
 }
     
