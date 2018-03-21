@@ -11,8 +11,8 @@ class BS{
     int[] number ;
     int size ;
 
-    // Invoke methods to initialize, print and search
-    // for elements on the array
+    /*Invoke methods to initialize, print and search
+    for elements on the array*/
     public int Start(int sz){
 	int aux01 ;
 	int aux02 ;
