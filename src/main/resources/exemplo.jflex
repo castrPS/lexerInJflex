@@ -20,7 +20,7 @@ integer         = 0|[1-9][0-9]*
 alphanumeric    = {letter}|{digit}
 id              = ([_] | {letter})({alphanumeric} | [_])*
 whitespace      = [ |\n|\t|\f|\r]
-comment		    = "//" .* (\n)?|"/*".*"*/\n"
+comment		    = "//" .* (\n)?|"/*"~"*/\n"
 
 %%
 
