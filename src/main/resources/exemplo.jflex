@@ -84,6 +84,7 @@ comment         = [/|/.*\n]
 "}"             { System.out.println("Token }"); }
 "["             { System.out.println("Token ["); }
 "]"             { System.out.println("Token ]"); }
+"\""            { System.out.println("Token \""); }
 
 }
     
