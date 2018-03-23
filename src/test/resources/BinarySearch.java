@@ -12,7 +12,7 @@ class BS{
     int size ;
 
     /*Invoke methods to initialize, print and search
-    */
+    AAAAAAAA*/
     public int Start(int sz){
 	int aux01 ;
 	int aux02 ;
